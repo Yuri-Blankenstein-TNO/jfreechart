@@ -2,7 +2,7 @@
  * JFreeChart : a free chart library for the Java(tm) platform
  * ===========================================================
  *
- * (C) Copyright 2000-2022, by David Gilbert and Contributors.
+ * (C) Copyright 2000-present, by David Gilbert and Contributors.
  *
  * Project Info:  http://www.jfree.org/jfreechart/index.html
  *
@@ -27,7 +27,7 @@
  * -----------
  * Minute.java
  * -----------
- * (C) Copyright 2001-2022, by David Gilbert.
+ * (C) Copyright 2001-present, by David Gilbert.
  *
  * Original Author:  David Gilbert;
  * Contributor(s):   -;
@@ -59,13 +59,13 @@ public class Minute extends RegularTimePeriod implements Serializable {
     public static final int LAST_MINUTE_IN_HOUR = 59;
 
     /** The day. */
-    private Day day;
+    private final Day day;
 
     /** The hour in which the minute falls. */
-    private byte hour;
+    private final byte hour;
 
     /** The minute. */
-    private byte minute;
+    private final byte minute;
 
     /** The first millisecond. */
     private long firstMillisecond;
@@ -381,7 +381,7 @@ public class Minute extends RegularTimePeriod implements Serializable {
         if (this.hour != that.hour) {
             return false;
         }
-        return true;
+        return this.day.equals(that.day);
     }
 
     /**
@@ -420,9 +420,12 @@ public class Minute extends RegularTimePeriod implements Serializable {
         // -------------------------------------------
         if (o1 instanceof Minute) {
             Minute m = (Minute) o1;
-            result = getHour().compareTo(m.getHour());
+            result = this.day.compareTo(m.day);
             if (result == 0) {
-                result = this.minute - m.getMinute();
+                result = this.hour - m.hour;
+                if (result == 0) {
+                    result = this.minute - m.getMinute();
+                }
             }
         }
 

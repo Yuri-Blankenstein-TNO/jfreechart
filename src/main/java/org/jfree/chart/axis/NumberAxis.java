@@ -2,7 +2,7 @@
  * JFreeChart : a free chart library for the Java(tm) platform
  * ===========================================================
  *
- * (C) Copyright 2000-2022, by David Gilbert and Contributors.
+ * (C) Copyright 2000-present, by David Gilbert and Contributors.
  *
  * Project Info:  http://www.jfree.org/jfreechart/index.html
  *
@@ -27,7 +27,7 @@
  * ---------------
  * NumberAxis.java
  * ---------------
- * (C) Copyright 2000-2022, by David Gilbert and Contributors.
+ * (C) Copyright 2000-present, by David Gilbert and Contributors.
  *
  * Original Author:  David Gilbert;
  * Contributor(s):   Laurence Vanhelsuwe;
@@ -47,6 +47,7 @@ import java.awt.geom.Rectangle2D;
 import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
@@ -984,9 +985,7 @@ public class NumberAxis extends ValueAxis implements Cloneable, Serializable {
     protected List refreshTicksVertical(Graphics2D g2,
             Rectangle2D dataArea, RectangleEdge edge) {
 
-        List result = new java.util.ArrayList();
-        result.clear();
-
+        List<Tick> result = new ArrayList<>();
         Font tickLabelFont = getTickLabelFont();
         g2.setFont(tickLabelFont);
         if (isAutoTickUnitSelection()) {
