@@ -61,6 +61,7 @@ History
 - Enable scrollbars by refactoring `ValueAxis#autoAdjustRange()` ([#220](https://github.com/jfree/jfreechart/issues/220));
 - Exposing `getAnnotations()` method on `XYItemRenderer` interface ([#221](https://github.com/jfree/jfreechart/issues/221));
 - Adding means to measure and illustrate differences in XYPlots ([#224](https://github.com/jfree/jfreechart/issues/224));
+- Add clearSeriesXXX methods for all series settings in AbstractRenderer ([#364](https://github.com/jfree/jfreechart/issues/364))
 
 ##### Version 1.5.5 (not yet released)
 - fix cross hair painting ([#340](https://github.com/jfree/jfreechart/issues/340))
