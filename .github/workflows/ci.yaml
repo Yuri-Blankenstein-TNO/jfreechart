@@ -4,15 +4,9 @@ name: Java CI
 on: [push]
 
 jobs:
-  test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        java: [8, 11, 17, 21]
-      fail-fast: false
-      max-parallel: 4
-    name: Test JDK ${{ matrix.java }}, ${{ matrix.os }}
+  build:
+    runs-on: ubuntu-latest
+    name: Build and Test with JDK 8 on ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -20,8 +14,8 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: ${{ matrix.java }}
-      - name: Test with Maven
+          java-version: 8
+      - name: Build and Test with Maven
         run: mvn package -P release -B --file pom.xml
       - name: Attach Test Report
         if: success() || failure()
@@ -33,5 +27,8 @@ jobs:
           path: |
             target/apidocs
             target/maven-repo
-
-...
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: target/jfreechart-*-dist.zip
