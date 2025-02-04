@@ -22,6 +22,10 @@ need to also include the JFreeChart-FX extensions:
 
 https://github.com/jfree/jfreechart-fx
 
+API docs can be found here:
+
+[https://yuri-blankenstein-tno.github.io/jfreechart/apidocs/](https://yuri-blankenstein-tno.github.io/jfreechart/apidocs/)
+
 The library is licensed under the terms of the GNU Lesser General Public 
 License (LGPL) version 2.1 or later.
 
@@ -30,11 +34,26 @@ Using JFreeChart
 ----------------
 To use JFreeChart in your projects, add the following dependency to your build tool:
 
-    <dependency>
-        <groupId>org.jfree</groupId>
-        <artifactId>jfreechart</artifactId>
-        <version>1.6.0-RC5</version>
-    </dependency>
+	<repositories>
+        <repository>
+            <id>jfreechart-tno</id>
+            <url>https://yuri-blankenstein-tno.github.io/jfreechart/maven-repo</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <dependencies>
+		<dependency>
+			<groupId>org.jfree</groupId>
+			<artifactId>jfreechart</artifactId>
+			<version>1.6.0-RC5</version>
+		</dependency>
+    </dependencies>
 
 
 Building JFreeChart
