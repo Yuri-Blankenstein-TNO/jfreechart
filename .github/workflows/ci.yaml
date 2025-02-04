@@ -8,7 +8,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macOS-latest, windows-latest]
+        os: [ubuntu-latest]
         java: [8, 11, 17, 21]
       fail-fast: false
       max-parallel: 4
@@ -22,6 +22,16 @@ jobs:
           distribution: 'temurin'
           java-version: ${{ matrix.java }}
       - name: Test with Maven
-        run: mvn test -B --file pom.xml
+        run: mvn test -P release -B --file pom.xml
+      - name: Attach Test Report
+        if: success() || failure()
+        uses: scacap/action-surefire-report@v1
+      - name: Attach distribution
+        uses: actions/upload-artifact@v4
+        with:
+          name: jfreechart-dist
+          path: |
+            target/apidocs
+            target/maven-repo
 
 ...

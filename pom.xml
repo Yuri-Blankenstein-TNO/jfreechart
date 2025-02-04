@@ -264,6 +264,23 @@
                             </execution>
                         </executions>
                     </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-invoker-plugin</artifactId>
+                        <configuration>
+                            <localRepositoryPath>${project.build.directory}/maven-repo</localRepositoryPath>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>install-local-repo</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
                 </plugins>
             </build>
         </profile>
