@@ -22,7 +22,7 @@ jobs:
           distribution: 'temurin'
           java-version: ${{ matrix.java }}
       - name: Test with Maven
-        run: mvn test -P release -B --file pom.xml
+        run: mvn package -P release -B --file pom.xml
       - name: Attach Test Report
         if: success() || failure()
         uses: scacap/action-surefire-report@v1
