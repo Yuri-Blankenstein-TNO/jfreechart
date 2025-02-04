@@ -1,7 +1,7 @@
 JFreeChart
 ==========
 
-Version 1.5.6, not yet released.
+Version 1.6.0, not yet released.
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.jfree/jfreechart/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.jfree/jfreechart)
 
@@ -33,7 +33,7 @@ To use JFreeChart in your projects, add the following dependency to your build t
     <dependency>
         <groupId>org.jfree</groupId>
         <artifactId>jfreechart</artifactId>
-        <version>1.5.5</version>
+        <version>1.6.0-RC5</version>
     </dependency>
 
 
