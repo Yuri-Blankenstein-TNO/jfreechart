@@ -6,7 +6,7 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Build and Test with JDK 8 on ubuntu-latest
+    name: Build and Test with JDK 17 on ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -14,7 +14,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: 8
+          java-version: 17
       - name: Build and Test with Maven
         run: mvn package -P release -B --file pom.xml
       - name: Attach Test Report
