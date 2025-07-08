@@ -1,10 +1,10 @@
-/* ===========================================================
- * JFreeChart : a free chart library for the Java(tm) platform
- * ===========================================================
+/* ======================================================
+ * JFreeChart : a chart library for the Java(tm) platform
+ * ======================================================
  *
  * (C) Copyright 2000-present, by David Gilbert and Contributors.
  *
- * Project Info:  http://www.jfree.org/jfreechart/index.html
+ * Project Info:  https://www.jfree.org/jfreechart/index.html
  *
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
@@ -27,7 +27,7 @@
  * ---------------------
  * XYBezierRenderer.java
  * ---------------------
- * (C) Copyright, by Javier Robes and Contributors.
+ * (C) Copyright 2021-present, by Javier Robes and Contributors.
  *
  * Original Author:  Javier Robes;
  *
@@ -61,9 +61,6 @@ import org.jfree.data.xy.XYDataset;
  * A renderer that connects data points with Bezier cubic curves and/or
  * draws shapes at each data point.  This renderer is designed for use with
  * the {@link XYPlot} class.
- * <br><br>
- *
- * @since
  */
 public class XYBezierRenderer extends XYLineAndShapeRenderer {
 
@@ -127,6 +124,7 @@ public class XYBezierRenderer extends XYLineAndShapeRenderer {
      */
     private FillType fillType;
 
+    /** The gradient transformer. */
     private GradientPaintTransformer gradientPaintTransformer;
 
     /**
