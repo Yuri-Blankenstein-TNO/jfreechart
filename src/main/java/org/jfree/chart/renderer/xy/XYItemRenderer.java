@@ -1,10 +1,10 @@
-/* ===========================================================
- * JFreeChart : a free chart library for the Java(tm) platform
- * ===========================================================
+/* ======================================================
+ * JFreeChart : a chart library for the Java(tm) platform
+ * ======================================================
  *
  * (C) Copyright 2000-present, by David Gilbert and Contributors.
  *
- * Project Info:  http://www.jfree.org/jfreechart/index.html
+ * Project Info:  https://www.jfree.org/jfreechart/index.html
  *
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
@@ -143,7 +143,7 @@ public interface XYItemRenderer extends LegendItemSource {
     //// VISIBLE //////////////////////////////////////////////////////////////
 
     /**
-     * Returns a boolean that indicates whether or not the specified item
+     * Returns a boolean that indicates whether the specified item
      * should be drawn (this is typically used to hide an entire series).
      *
      * @param series  the series index.
@@ -154,7 +154,7 @@ public interface XYItemRenderer extends LegendItemSource {
     boolean getItemVisible(int series, int item);
 
     /**
-     * Returns a boolean that indicates whether or not the specified series
+     * Returns a boolean that indicates whether the specified series
      * should be drawn (this is typically used to hide an entire series).
      *
      * @param series  the series index.
@@ -911,7 +911,7 @@ public interface XYItemRenderer extends LegendItemSource {
      *
      * @param series  the series index (zero-based).
      * @param visible  the visible flag.
-     * @param notify  a flag that controls whether or not listeners are
+     * @param notify  a flag that controls whether listeners are
      *                notified.
      *
      * @see #isSeriesItemLabelsVisible(int)
@@ -929,7 +929,7 @@ public interface XYItemRenderer extends LegendItemSource {
     boolean getDefaultItemLabelsVisible();
 
     /**
-     * Sets the default flag that controls whether or not item labels are visible.
+     * Sets the default flag that controls whether item labels are visible.
      *
      * @param visible  the flag.
      *
@@ -942,7 +942,7 @@ public interface XYItemRenderer extends LegendItemSource {
      * {@link RendererChangeEvent} to all registered listeners.
      *
      * @param visible  the visibility flag.
-     * @param notify  a flag that controls whether or not listeners are
+     * @param notify  a flag that controls whether listeners are
      *                notified.
      *
      * @see #getDefaultItemLabelsVisible()
@@ -1269,7 +1269,7 @@ public interface XYItemRenderer extends LegendItemSource {
     Boolean getSeriesCreateEntities(int series);
 
     /**
-     * Sets a flag that specifies whether or not entities should be created for
+     * Sets a flag that specifies whether entities should be created for
      * a series during rendering, and sends a change event to registered 
      * listeners.
      * 
@@ -1279,7 +1279,7 @@ public interface XYItemRenderer extends LegendItemSource {
     void setSeriesCreateEntities(int series, Boolean create);
 
     /**
-     * Sets a flag that specifies whether or not entities should be created for
+     * Sets a flag that specifies whether entities should be created for
      * a series during rendering, and sends a change event to registered 
      * listeners.
      * 
@@ -1291,7 +1291,7 @@ public interface XYItemRenderer extends LegendItemSource {
                                  boolean notify);
 
     /**
-     * Returns the default value determining whether or not entities should be
+     * Returns the default value determining whether entities should be
      * created by the renderer.
      * 
      * @return A boolean. 
@@ -1299,7 +1299,7 @@ public interface XYItemRenderer extends LegendItemSource {
     boolean getDefaultCreateEntities();
 
     /**
-     * Sets the default value determining whether or not entities should be
+     * Sets the default value determining whether entities should be
      * created by the renderer, and sends a change event to all registered
      * listeners.
      * 
@@ -1308,7 +1308,7 @@ public interface XYItemRenderer extends LegendItemSource {
     void setDefaultCreateEntities(boolean create);
 
     /**
-     * Sets the default value determining whether or not entities should be
+     * Sets the default value determining whether entities should be
      * created by the renderer, and sends a change event to all registered
      * listeners.
      * 
@@ -1350,7 +1350,7 @@ public interface XYItemRenderer extends LegendItemSource {
      * @param annotation  the annotation to remove ({@code null} not
      *                    permitted).
      *
-     * @return A boolean to indicate whether or not the annotation was
+     * @return A boolean to indicate whether the annotation was
      *         successfully removed.
      */
     boolean removeAnnotation(XYAnnotation annotation);

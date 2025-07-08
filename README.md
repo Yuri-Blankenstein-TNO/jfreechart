@@ -3,7 +3,7 @@ JFreeChart
 
 Version 1.6.0, not yet released.
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.jfree/jfreechart/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.jfree/jfreechart)
+[![Maven Central](https://img.shields.io/maven-central/v/org.jfree/jfreechart)](https://central.sonatype.com/artifact/org.jfree/jfreechart/versions) [![javadoc](https://javadoc.io/badge2/org.jfree/jfreechart/javadoc.svg)](https://javadoc.io/doc/org.jfree/jfreechart)
 
 Overview
 --------
@@ -15,7 +15,7 @@ export to multiple formats including SVG, PNG and PDF).
 
 The home page for the project is:
 
-http://www.jfree.org/jfreechart
+https://www.jfree.org/jfreechart
 
 JFreeChart requires JDK 8 or later.  If JavaFX support is required, you
 need to also include the JFreeChart-FX extensions:
@@ -56,16 +56,23 @@ at GitHub:
 
 History
 -------
-
 ##### Version 1.6.0 (not-yet-released)
 - Enable scrollbars by refactoring `ValueAxis#autoAdjustRange()` ([#220](https://github.com/jfree/jfreechart/issues/220));
 - Exposing `getAnnotations()` method on `XYItemRenderer` interface ([#221](https://github.com/jfree/jfreechart/issues/221));
 - Adding means to measure and illustrate differences in XYPlots ([#224](https://github.com/jfree/jfreechart/issues/224));
-- Add clearSeriesXXX methods for all series settings in AbstractRenderer ([#364](https://github.com/jfree/jfreechart/issues/364))
 
-##### Version 1.5.6 (not yet released)
+##### Version 1.5.7 (not yet released)
 - fix zooming on CombinedDomainXYPlot with OfflineRenderingChartPanel ([#351](https://github.com/jfree/jfreechart/issues/351))
-- fix calculating if label fits inside bar for XYBarRenderer ([#366](https://github.com/jfree/jfreechart/issues/366))
+
+##### Version 1.5.6 (21 May 2025)
+- added `setSymbols` method to `SymbolAxis` ([#421](https://github.com/jfree/jfreechart/pull/421))
+- added label padding to `Crosshair` ([#414](https://github.com/jfree/jfreechart/pull/414))
+- add clearSeriesXXX methods for all series settings in `AbstractRenderer` ([#364](https://github.com/jfree/jfreechart/issues/364))
+- fix calculating if label fits inside bar for `XYBarRenderer` ([#366](https://github.com/jfree/jfreechart/issues/366))
+- set default background paint to `LIGHT_GRAY` ([#324](https://github.com/jfree/jfreechart/issues/324))
+- deprecated all classes in `org.jfree.chart.servlet.*` ([#385](https://github.com/jfree/jfreechart/issues/385))
+- updated `pom.xml` with new Maven publishing flow and latest plugin versions
+- various minor improvements
 
 ##### Version 1.5.5 (23 June 2024)
 - added `XYBezierRenderer` by Javier Robes ([#286](https://github.com/jfree/jfreechart/pull/286))
@@ -182,7 +189,7 @@ Note: some (supposed) security vulnerabilities have been reported for v1.5.4:
 - simplified `ChartFactory` methods;
 - added new methods to `DatasetUtilities` to interpolate y-values in `XYDatasets`;
 - added URLs to labels on `CategoryAxis`;
-- seamless integration with JFreeSVG (http://www.jfree.org/jfreesvg/) and OrsonPDF 
+- seamless integration with JFreeSVG (https://www.jfree.org/jfreesvg/) and OrsonPDF 
 (http://www.object-refinery.com/pdf/);
 - improved the consistency of the `SWTGraphics2D` implementation;  
 
@@ -871,7 +878,7 @@ adjustments (there should be no breakage of applications coded to the 1.0.0 API)
 
 ###### API adjustments
 - `BarRenderer`: added a new flag (`includeBaseInRange`), plus accessor 
-    methods, that controls whether or not the base value for the bar is 
+    methods, that controls whether the base value for the bar is 
     included in the range calculated by the `findRangeBounds()` method;
 - `BubbleXYItemLabelGenerator`: new class;
 - `Range`: added a new method `expandToInclude(Range, double)`, this is used by 
@@ -1373,6 +1380,7 @@ JFreeChart wouldn't be half the library that it is today without the contributio
 - Richard Atkinson
 - David Basten
 - David Berry
+- Yuri Blankenstein
 - Chris Boek
 - Zoheb Borbora
 - Anthony Boulestreau
