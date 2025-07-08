@@ -445,7 +445,6 @@ public class ChartPanel extends JPanel implements ChartChangeListener,
      * The mask/predicate for mouse events to trigger range zoom.
      */
     protected Predicate<MouseEvent> zoomRangePredicate = e -> false;
-
     /** The movable chart entity (selected by the user by dragging the mouse). */
     private transient MovableChartEntity movableChartEntity;
 
