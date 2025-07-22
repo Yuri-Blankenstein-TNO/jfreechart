@@ -63,6 +63,7 @@ History
 
 ##### Version 1.5.7 (not yet released)
 - fix zooming on CombinedDomainXYPlot with OfflineRenderingChartPanel ([#351](https://github.com/jfree/jfreechart/issues/351))
+- alternative solution for issue [#340](https://github.com/jfree/jfreechart/issues/340) that yields better performance ([#362](https://github.com/jfree/jfreechart/pull/362))
 
 ##### Version 1.5.6 (21 May 2025)
 - added `setSymbols` method to `SymbolAxis` ([#421](https://github.com/jfree/jfreechart/pull/421))
