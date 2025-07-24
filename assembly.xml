@@ -4,13 +4,26 @@
         <format>zip</format>
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
+    <files>
+      <file>
+        <source>README.md</source>
+        <outputDirectory></outputDirectory>
+        <filtered>true</filtered>
+      </file>
+    </files>
     <fileSets>
         <fileSet>
             <directory>${project.build.directory}</directory>
             <outputDirectory />
             <includes>
-                <include>apidocs/**</include>
                 <include>maven-repo/**</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}/reports</directory>
+            <outputDirectory />
+            <includes>
+                <include>apidocs/**</include>
             </includes>
         </fileSet>
     </fileSets>

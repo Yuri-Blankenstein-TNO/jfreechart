@@ -1,9 +1,11 @@
 JFreeChart
 ==========
 
-Version 1.6.0, not yet released.
+Version ${project.version}.
 
-[![Maven Central](https://img.shields.io/maven-central/v/org.jfree/jfreechart)](https://central.sonatype.com/artifact/org.jfree/jfreechart/versions) [![javadoc](https://javadoc.io/badge2/org.jfree/jfreechart/javadoc.svg)](https://javadoc.io/doc/org.jfree/jfreechart)
+**NOTE:** This site hosts a fork of the original `org.jfree.jfreechart` library.
+All changes compared to the original library are described in the [History](#history),
+and are provided back by means of (pending) pull requests to the original library.
 
 Overview
 --------
@@ -31,9 +33,9 @@ Using JFreeChart
 To use JFreeChart in your projects, add the following dependency to your build tool:
 
     <dependency>
-        <groupId>org.jfree</groupId>
+        <groupId>nl.esi</groupId>
         <artifactId>jfreechart</artifactId>
-        <version>1.6.0-RC5</version>
+        <version>${project.version}</version>
     </dependency>
 
 
@@ -43,7 +45,7 @@ You can build JFreeChart using Maven with the following command (issued from the
 
     mvn clean verify
 
-The build requires JDK 8 or later.
+The build requires JDK 17 or later.
 
 Demos
 -----
@@ -56,12 +58,10 @@ at GitHub:
 
 History
 -------
-##### Version 1.6.0 (not-yet-released)
+##### Version 1.6.0 (${build.date})
 - Enable scrollbars by refactoring `ValueAxis#autoAdjustRange()` ([#220](https://github.com/jfree/jfreechart/issues/220));
 - Exposing `getAnnotations()` method on `XYItemRenderer` interface ([#221](https://github.com/jfree/jfreechart/issues/221));
 - Adding means to measure and illustrate differences in XYPlots ([#224](https://github.com/jfree/jfreechart/issues/224));
-
-##### Version 1.5.7 (not yet released)
 - fix zooming on CombinedDomainXYPlot with OfflineRenderingChartPanel ([#351](https://github.com/jfree/jfreechart/issues/351))
 - alternative solution for issue [#340](https://github.com/jfree/jfreechart/issues/340) that yields better performance ([#362](https://github.com/jfree/jfreechart/pull/362))
 
